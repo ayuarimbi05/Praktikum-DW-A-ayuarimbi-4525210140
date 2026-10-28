@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi TechFest 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registrasi TechFest 2026</h1>
+        <p>Silakan isi formulir pendaftaran di bawah ini.</p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama"
+                   minlength="3" required
+                   placeholder="Masukkan nama lengkap">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email"
+                   required placeholder="contoh@email.com">
+
+            <label for="telepon">Nomor Telepon</label>
+            <input type="tel" id="telepon" name="telepon"
+                   pattern="[0-9]{10,15}"
+                   title="Masukkan 10 sampai 15 digit angka"
+                   required placeholder="Contoh: 081234567890">
+
+            <label>Jenis Peserta</label>
+            <div class="pilihan">
+                <input type="radio" id="mahasiswa" name="peserta"
+                       value="Mahasiswa" required>
+                <label for="mahasiswa">Mahasiswa</label>
+
+                <input type="radio" id="umum" name="peserta"
+                       value="Umum">
+                <label for="umum">Umum</label>
+            </div>
+
+            <label>Pilihan Sesi</label>
+            <div class="pilihan">
+                <input type="checkbox" id="web" name="sesi"
+                       value="Web Development">
+                <label for="web">Web Development</label>
+            </div>
+
+            <div class="pilihan">
+                <input type="checkbox" id="data" name="sesi"
+                       value="Data Analysis">
+                <label for="data">Data Analysis</label>
+            </div>
+
+            <div class="pilihan">
+                <input type="checkbox" id="design" name="sesi"
+                       value="UI/UX Design">
+                <label for="design">UI/UX Design</label>
+            </div>
+
+            <label for="ukuran">Ukuran Kaos</label>
+            <select id="ukuran" name="ukuran" required>
+                <option value="">-- Pilih ukuran --</option>
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+
+            <label for="alasan">Alasan Mengikuti Event</label>
+            <textarea id="alasan" name="alasan"
+                      minlength="10" required
+                      placeholder="Tuliskan alasan minimal 10 karakter"></textarea>
+
+            <label for="file">Upload Kartu Identitas</label>
+            <input type="file" id="file" name="identitas"
+                   accept=".jpg,.jpeg,.png,.pdf" required>
+
+            <div class="persetujuan">
+                <input type="checkbox" id="setuju" name="persetujuan"
+                       required>
+                <label for="setuju">
+                    Saya menyetujui data yang saya isi.
+                </label>
+            </div>
+
+            <div class="tombol">
+                <button type="submit">Daftar</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
