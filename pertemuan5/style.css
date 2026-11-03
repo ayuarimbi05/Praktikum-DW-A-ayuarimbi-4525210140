@@ -1,0 +1,93 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+header {
+    background: #eeeeee;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+nav {
+    background: #cccccc;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.utama {
+    flex: 2;
+    border: 1px solid #999;
+    padding: 15px;
+}
+
+aside {
+    flex: 1;
+    border: 1px solid #999;
+    padding: 15px;
+}
+
+.gambar {
+    background: #dddddd;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.berita {
+    background: #eeeeee;
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.catatan {
+    font-size: 12px;
+    color: #666666;
+}
+
+footer {
+    background: #eeeeee;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Tampilan mobile */
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .gambar {
+        min-height: 130px;
+    }
+}
