@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pendaftaran Kursus Berenang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <p class="eyebrow">FORMULIR ONLINE</p>
+      <h1>🏊 Pendaftaran Kursus Berenang</h1>
+      <p>Daftarkan diri Anda untuk belajar berenang dengan aman dan percaya diri.</p>
+    </header>
+
+    <form id="registrationForm" action="#" method="post" enctype="multipart/form-data">
+      <section class="form-section">
+        <h2>Data Peserta</h2>
+        <div class="form-group">
+          <label for="nama">Nama lengkap peserta <span class="required">*</span></label>
+          <input type="text" id="nama" name="nama" required minlength="3" maxlength="100"
+                 pattern="[A-Za-zÀ-ÿ .'-]+" title="Nama hanya boleh berisi huruf, spasi, titik, apostrof, atau tanda hubung.">
+          <small>Minimal 3 karakter.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="umur">Usia peserta (tahun) <span class="required">*</span></label>
+          <input type="number" id="umur" name="umur" required min="4" max="80"
+                 title="Usia peserta harus antara 4 sampai 80 tahun.">
+          <small>Kursus tersedia untuk peserta usia 4–80 tahun.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email orang tua/peserta <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telepon">Nomor telepon <span class="required">*</span></label>
+          <input type="tel" id="telepon" name="telepon" required pattern="08[0-9]{8,11}"
+                 title="Nomor telepon harus diawali 08 dan terdiri dari 10–13 digit.">
+          <small>Contoh: 081234567890</small>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Informasi Kursus</h2>
+
+        <fieldset class="form-group">
+          <legend>Jenis kelas berenang <span class="required">*</span></legend>
+          <label class="choice"><input type="radio" name="kelas" value="pemula" required> Pemula — belum bisa berenang</label>
+          <label class="choice"><input type="radio" name="kelas" value="menengah"> Menengah — sudah bisa dasar berenang</label>
+          <label class="choice"><input type="radio" name="kelas" value="lanjutan"> Lanjutan — teknik dan stamina</label>
+          <label class="choice"><input type="radio" name="kelas" value="anak"> Kelas anak</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="jadwal">Pilihan jadwal <span class="required">*</span></label>
+          <select id="jadwal" name="jadwal" required>
+            <option value="">-- Pilih jadwal --</option>
+            <option value="weekday-pagi">Hari kerja — pagi</option>
+            <option value="weekday-sore">Hari kerja — sore</option>
+            <option value="weekend-pagi">Akhir pekan — pagi</option>
+            <option value="weekend-sore">Akhir pekan — sore</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Perlengkapan yang ingin disewa</legend>
+          <label class="choice"><input type="checkbox" name="perlengkapan[]" value="kacamata"> Kacamata renang</label>
+          <label class="choice"><input type="checkbox" name="perlengkapan[]" value="pelampung"> Pelampung</label>
+          <label class="choice"><input type="checkbox" name="perlengkapan[]" value="topi"> Topi renang</label>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="pengalaman">Pengalaman dan tujuan belajar <span class="required">*</span></label>
+          <textarea id="pengalaman" name="pengalaman" rows="5" required minlength="20" maxlength="500"
+                    placeholder="Ceritakan pengalaman berenang dan tujuan mengikuti kursus (minimal 20 karakter)."></textarea>
+          <small><span id="charCount">0</span>/500 karakter</small>
+        </div>
+
+        <div class="form-group">
+          <label for="catatan">Catatan tambahan (opsional)</label>
+          <textarea id="catatan" name="catatan" rows="3" maxlength="300"
+                    placeholder="Contoh: ingin fokus belajar gaya bebas."></textarea>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h2>Pembayaran dan Persetujuan</h2>
+        <div class="form-group">
+          <label for="bukti">Upload bukti pembayaran <span class="required">*</span></label>
+          <input type="file" id="bukti" name="bukti" required accept=".jpg,.jpeg,.png,.pdf">
+          <small>Format JPG, PNG, atau PDF; ukuran maksimal 2 MB.</small>
+        </div>
+
+        <label class="choice consent">
+          <input type="checkbox" id="persetujuan" name="persetujuan" required>
+          Saya menyatakan data pendaftaran benar dan menyetujui aturan kursus serta keselamatan kolam. <span class="required">*</span>
+        </label>
+      </section>
+
+      <div class="button-group">
+        <button type="submit" class="btn btn-primary">Daftar Kursus</button>
+        <button type="reset" class="btn btn-secondary">Reset Form</button>
+        <button type="button" id="helpButton" class="btn btn-outline">Petunjuk</button>
+      </div>
+      <p id="statusMessage" class="status-message" aria-live="polite"></p>
+    </form>
+
+    <footer>© 2026 AquaSwim • Form demonstrasi pendaftaran</footer>
+  </main>
+
+  <script>
+    const form = document.getElementById('registrationForm');
+    const fileInput = document.getElementById('bukti');
+    const statusMessage = document.getElementById('statusMessage');
+    const textarea = document.getElementById('pengalaman');
+    const charCount = document.getElementById('charCount');
+
+    // Validasi ukuran bukti pembayaran maksimal 2 MB.
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (file && file.size > 2 * 1024 * 1024) {
+        fileInput.setCustomValidity('Ukuran file maksimal 2 MB.');
+      } else {
+        fileInput.setCustomValidity('');
+      }
+    });
+
+    textarea.addEventListener('input', () => {
+      charCount.textContent = textarea.value.length;
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      statusMessage.textContent = 'Validasi browser berhasil. Form belum dikirim ke server karena ini demo.';
+      statusMessage.classList.add('success');
+    });
+
+    form.addEventListener('reset', () => {
+      statusMessage.textContent = '';
+      statusMessage.classList.remove('success');
+      setTimeout(() => { charCount.textContent = '0'; }, 0);
+    });
+
+    document.getElementById('helpButton').addEventListener('click', () => {
+      alert('Isi data peserta, pilih kelas dan jadwal, unggah bukti pembayaran JPG/PNG/PDF maksimal 2 MB, lalu centang persetujuan.');
+    });
+  </script>
+</body>
+</html>
