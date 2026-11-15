@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+       content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Akademik</title>
+  <!-- Bootstrap 5.3.8 -->
+  <link
+     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+     rel="stylesheet">
+  <!-- CSS tambahan -->
+  <link
+     rel="stylesheet"
+     href="css/style.css">
+</head>
+<body class="bg-light">
+  <!-- =========================
+      HEADER
+      ========================= -->
+  <header class="bg-primary text-white py-4">
+     <div class="container">
+        <h1 class="h3 mb-1">
+           Dashboard Akademik
+        </h1>
+        <p class="mb-0">
+           Sistem Informasi Akademik Fakultas Teknik
+        </p>
+     </div>
+  </header>
+
+  <!-- =========================
+      MAIN CONTENT
+      ========================= -->
+  <main class="container my-5">
+     <div class="row align-items-center mb-4">
+        <div class="col-12 col-md-8">
+           <h2>Ringkasan Akademik</h2>
+           <p class="text-secondary mb-md-0">
+              Informasi data mahasiswa dan kegiatan akademik.
+           </p>
+        </div>
+        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
+           <button class="btn btn-primary">
+              + Tambah Data
+           </button>
+        </div>
+     </div>
+
+     <!-- =========================
+         STATISTIK AKADEMIK
+         ========================= -->
+     <div class="row g-3 mb-4">
+        <div class="col-12 col-md-6 col-lg-3">
+           <div class="card shadow-sm h-100">
+              <div class="card-body">
+                 <p class="text-secondary mb-1">Total Mahasiswa</p>
+                 <h3 class="mb-0">250</h3>
+              </div>
+           </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+           <div class="card shadow-sm h-100">
+              <div class="card-body">
+                 <p class="text-secondary mb-1">Mahasiswa Aktif</p>
+                 <h3 class="mb-0 text-success">230</h3>
+              </div>
+           </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+           <div class="card shadow-sm h-100">
+              <div class="card-body">
+                 <p class="text-secondary mb-1">Jumlah Program Studi</p>
+                 <h3 class="mb-0 text-primary">5</h3>
+              </div>
+           </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+           <div class="card shadow-sm h-100">
+              <div class="card-body">
+                 <p class="text-secondary mb-1">Kegiatan Akademik</p>
+                 <h3 class="mb-0 text-warning">12</h3>
+              </div>
+           </div>
+        </div>
+     </div>
+
+     <!-- =========================
+         TABEL DATA MAHASISWA
+         ========================= -->
+     <div class="card shadow-sm">
+        <div class="card-header bg-white py-3">
+           <h3 class="h5 mb-0">Data Mahasiswa</h3>
+        </div>
+        <div class="card-body">
+           <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                 <thead class="table-dark">
+                    <tr>
+                       <th>No.</th>
+                       <th>NPM</th>
+                       <th>Nama</th>
+                       <th>Program Studi</th>
+                       <th>Angkatan</th>
+                       <th>Status</th>
+                       <th>Aksi</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                       <td>1</td><td>4525210001</td><td>Andi Pratama</td>
+                       <td>Informatika</td><td>2025</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>2</td><td>4525210002</td><td>Siti Aulia</td>
+                       <td>Teknik Sipil</td><td>2025</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>3</td><td>4525210003</td><td>Rizky Ramadhan</td>
+                       <td>Teknik Industri</td><td>2025</td>
+                       <td><span class="badge text-bg-warning">Cuti</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>4</td><td>4525210004</td><td>Putri Amelia</td>
+                       <td>Informatika</td><td>2025</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>5</td><td>4525210005</td><td>Fajar Maulana</td>
+                       <td>Teknik Mesin</td><td>2025</td>
+                       <td><span class="badge text-bg-danger">Nonaktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>6</td><td>4525210006</td><td>Nadia Safitri</td>
+                       <td>Teknik Elektro</td><td>2025</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>7</td><td>4525210007</td><td>Dimas Saputra</td>
+                       <td>Informatika</td><td>2024</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>8</td><td>4525210008</td><td>Rahma Putri</td>
+                       <td>Teknik Sipil</td><td>2024</td>
+                       <td><span class="badge text-bg-warning">Cuti</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>9</td><td>4525210009</td><td>Yoga Firmansyah</td>
+                       <td>Teknik Industri</td><td>2024</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                    <tr>
+                       <td>10</td><td>4525210010</td><td>Intan Permata</td>
+                       <td>Teknik Elektro</td><td>2024</td>
+                       <td><span class="badge text-bg-success">Aktif</span></td>
+                       <td><button class="btn btn-sm btn-primary">Detail</button></td>
+                    </tr>
+                 </tbody>
+              </table>
+           </div>
+        </div>
+     </div>
+  </main>
+
+  <!-- =========================
+      FOOTER
+      ========================= -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+     <div class="container">
+        <p class="mb-0">
+           &copy; 2026 Dashboard Akademik - Praktikum Desain Web
+        </p>
+     </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
