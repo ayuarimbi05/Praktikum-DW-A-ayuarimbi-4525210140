@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    color: rgb(252, 47, 166);
+}
+
+h2 {
+    color: rgb(247, 7, 207);
+}
+
+img {
+    border-radius: 10px;
+}
+
+.daftar-keahlian {
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

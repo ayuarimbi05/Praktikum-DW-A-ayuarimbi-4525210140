@@ -1,0 +1,184 @@
+/* Pengaturan dasar dan box model */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #263238;
+    background-color: #f8faf9;
+}
+
+header {
+    background-color: #245b52;
+    color: white;
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian pembuka */
+.hero {
+    padding: 80px 7%;
+    background-color: #e4f1eb;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.label {
+    color: #39796d;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.hero h2 {
+    margin: 10px 0;
+    color: #204d45;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.hero p {
+    max-width: 620px;
+    margin: 16px auto 24px;
+}
+
+/* Class reusable untuk tombol */
+.button {
+    display: inline-block;
+    padding: 11px 22px;
+    background-color: #245b52;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: #173f38;
+}
+
+/* Bagian isi halaman */
+.section {
+    padding: 50px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-top: 0;
+    color: #204d45;
+}
+
+.section-intro {
+    margin-bottom: 28px;
+}
+
+/* Class card dipakai ulang untuk tiga layanan */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    flex: 1;
+    max-width: 320px;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #d5e2dc;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(30, 70, 60, 0.08);
+}
+
+.card h3 {
+    color: #39796d;
+}
+
+.about {
+    background-color: #eef4f1;
+}
+
+.about p {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact {
+    padding-bottom: 60px;
+}
+
+footer {
+    padding: 18px;
+    background-color: #245b52;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Tampilan untuk layar kecil, di bawah 768px */
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .section {
+        padding: 38px 6%;
+    }
+
+    .card-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 420px;
+    }
+}
