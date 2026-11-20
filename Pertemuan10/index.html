@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selaras Coffee - kopi pilihan, suasana nyaman, dan cerita dalam setiap cangkir." />
+    <title>Selaras Coffee | Temukan Ritme Kopimu</title>
+
+    <!-- Bootstrap CSS dipanggil lebih dahulu -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS diletakkan setelah Bootstrap untuk override tema -->
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
+      <div class="container">
+        <a class="navbar-brand brand-name" href="#beranda" aria-label="Selaras Coffee beranda">
+          <span class="brand-mark">S</span>
+          <span>selaras<span class="brand-light"> coffee.</span></span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuUtama"
+          aria-controls="menuUtama"
+          aria-expanded="false"
+          aria-label="Buka navigasi"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuUtama">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+            <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+            <li class="nav-item ms-lg-2">
+              <a class="btn btn-cream btn-sm px-4" href="#produk">Lihat Menu</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ======================== HERO ======================== -->
+      <header id="beranda" class="hero-section">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-12 col-lg-6 hero-copy">
+              <span class="eyebrow"><span class="eyebrow-line"></span> COFFEE • COMMUNITY • COMFORT</span>
+              <h1>Temukan ritme,<br /><em>nikmati</em> setiap<br />cerita.</h1>
+              <p class="hero-description">
+                Secangkir kopi yang diracik dengan hati, teman untuk jeda sejenak,
+                dan ruang nyaman untuk setiap cerita.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a class="btn btn-coffee btn-lg" href="#produk">Jelajahi Menu <span aria-hidden="true">↗</span></a>
+                <button
+                  class="btn btn-outline-coffee btn-lg"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalCerita"
+                >Cerita Selaras</button>
+              </div>
+              <div class="hero-note mt-5">
+                <span class="hero-note-icon">✳</span>
+                <span>Diracik segar setiap hari <strong>·</strong> Dibuat untuk menemani harimu</span>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="hero-art" role="img" aria-label="Ilustrasi secangkir kopi hangat di atas meja">
+                <div class="art-sun"></div>
+                <div class="art-circle art-circle-one"></div>
+                <div class="art-circle art-circle-two"></div>
+                <div class="coffee-beans bean-one">✦</div>
+                <div class="coffee-beans bean-two">✦</div>
+                <div class="cup-shadow"></div>
+                <div class="coffee-cup">
+                  <div class="coffee-top"><span class="latte-art">♡</span></div>
+                  <div class="cup-logo">S</div>
+                  <div class="cup-handle"></div>
+                </div>
+                <div class="art-caption"><span>01 / 03</span><span>YOUR DAILY PAUSE</span></div>
+                <div class="art-sticker">GOOD<br />MOOD<br /><b>ONLY</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ======================== ALERT PROMO ======================== -->
+      <section class="container promo-wrap" aria-label="Informasi promo">
+        <div class="alert promo-alert alert-dismissible fade show mb-0" role="alert">
+          <div class="promo-icon">✦</div>
+          <div><strong>HAPPY HOURS!</strong> Nikmati potongan 15% untuk semua minuman setiap hari pukul 14.00–17.00.</div>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
+        </div>
+      </section>
+
+      <!-- ======================== TENTANG ======================== -->
+      <section id="tentang" class="about-section section-space">
+        <div class="container">
+          <div class="row align-items-end gy-3">
+            <div class="col-12 col-lg-7">
+              <span class="section-label">KENALAN DENGAN KAMI</span>
+              <h2 class="section-title">Lebih dari kopi,<br /><em>ini tentang rasa.</em></h2>
+            </div>
+            <div class="col-12 col-lg-5">
+              <p class="section-intro">Selaras Coffee hadir sebagai tempat untuk memperlambat waktu. Kami memilih biji kopi berkualitas dan menyajikannya dengan sederhana, hangat, dan penuh perhatian.</p>
+            </div>
+          </div>
+          <div class="row g-3 mt-4 values-row">
+            <div class="col-12 col-md-4">
+              <div class="value-card"><span>01</span><h3>Biji Berkualitas</h3><p>Memilih biji kopi pilihan untuk rasa yang konsisten di setiap seduhan.</p></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="value-card"><span>02</span><h3>Diracik dengan Hati</h3><p>Setiap cangkir dibuat dengan teliti oleh barista kami.</p></div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="value-card"><span>03</span><h3>Ruang untuk Semua</h3><p>Tempat nyaman untuk bekerja, bertemu, atau menikmati waktu sendiri.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== PRODUK / CARD ======================== -->
+      <section id="produk" class="product-section section-space">
+        <div class="container">
+          <div class="text-center section-heading">
+            <span class="section-label">DARI BAR KAMI</span>
+            <h2 class="section-title">Teman terbaik <em>harimu.</em></h2>
+            <p class="section-intro mx-auto">Temukan favoritmu dari pilihan menu yang kami siapkan.</p>
+          </div>
+          <div class="row g-4 mt-3">
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card product-card h-100">
+                <div class="product-visual visual-latte"><span class="product-tag">BEST SELLER</span><div class="glass-cup"><div class="latte-layer"></div><span>♡</span></div><span class="visual-caption">01 / COFFEE</span></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start gap-2"><h3 class="card-title">Selaras Latte</h3><span class="product-price">Rp28K</span></div>
+                  <p class="card-text">Espresso khas Selaras dengan susu creamy dan sentuhan rasa manis yang seimbang.</p>
+                  <button class="btn btn-card-detail" type="button" data-bs-toggle="modal" data-bs-target="#modalProduk" data-product="Selaras Latte" data-description="Espresso khas Selaras yang dipadukan dengan susu creamy. Cocok untuk menemani aktivitas harian.">Lihat detail <span>↗</span></button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card product-card h-100">
+                <div class="product-visual visual-aren"><span class="product-tag">FAVORIT</span><div class="glass-cup glass-aren"><div class="aren-layer"></div><span>✳</span></div><span class="visual-caption">02 / SIGNATURE</span></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start gap-2"><h3 class="card-title">Kopi Susu Aren</h3><span class="product-price">Rp25K</span></div>
+                  <p class="card-text">Perpaduan kopi, susu, dan gula aren dengan karakter rasa yang hangat.</p>
+                  <button class="btn btn-card-detail" type="button" data-bs-toggle="modal" data-bs-target="#modalProduk" data-product="Kopi Susu Aren" data-description="Perpaduan espresso, susu segar, dan gula aren. Rasa manis legit dengan karakter kopi yang tetap terasa.">Lihat detail <span>↗</span></button>
+                </div>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <article class="card product-card h-100">
+                <div class="product-visual visual-matcha"><span class="product-tag">NON-COFFEE</span><div class="glass-cup glass-matcha"><div class="matcha-layer"></div><span>✿</span></div><span class="visual-caption">03 / FRESH</span></div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start gap-2"><h3 class="card-title">Matcha Cloud</h3><span class="product-price">Rp27K</span></div>
+                  <p class="card-text">Matcha lembut dengan susu segar untuk pilihan yang ringan dan menyegarkan.</p>
+                  <button class="btn btn-card-detail" type="button" data-bs-toggle="modal" data-bs-target="#modalProduk" data-product="Matcha Cloud" data-description="Matcha pilihan yang dikocok hingga lembut lalu dipadukan dengan susu segar. Pilihan menyegarkan untuk pencinta non-coffee.">Lihat detail <span>↗</span></button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== CTA ======================== -->
+      <section class="visit-section">
+        <div class="container">
+          <div class="visit-panel">
+            <div><span class="section-label">TAKE A LITTLE BREAK</span><h2>Sisihkan waktu,<br /><em>temui Selaras.</em></h2></div>
+            <a class="btn btn-cream btn-lg" href="#kontak">Hubungi Kami <span aria-hidden="true">↗</span></a>
+            <span class="visit-decoration">S</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== FORM KONTAK ======================== -->
+      <section id="kontak" class="contact-section section-space">
+        <div class="container">
+          <div class="row g-5 align-items-start">
+            <div class="col-12 col-lg-5">
+              <span class="section-label">KAMI SIAP MENDENGAR</span>
+              <h2 class="section-title">Punya cerita<br /><em>untuk dibagi?</em></h2>
+              <p class="section-intro">Kirim pertanyaan, saran, atau ajakan kolaborasi. Kami akan senang mendengarnya.</p>
+              <div class="contact-detail"><span>✉</span><div><small>EMAIL</small><strong>halo@selarascoffee.id</strong></div></div>
+              <div class="contact-detail"><span>⌖</span><div><small>JAM OPERASIONAL</small><strong>Setiap hari · 09.00–22.00 WIB</strong></div></div>
+            </div>
+            <div class="col-12 col-lg-7">
+              <div class="contact-card">
+                <form id="contactForm">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6"><label for="nama" class="form-label">Nama lengkap</label><input type="text" class="form-control" id="nama" name="nama" placeholder="Nama kamu" required /></div>
+                    <div class="col-12 col-md-6"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" name="email" placeholder="nama@email.com" required /></div>
+                    <div class="col-12"><label for="topik" class="form-label">Topik</label><select class="form-select" id="topik" name="topik" required><option value="" selected disabled>Pilih topik pesan</option><option>Pertanyaan produk</option><option>Kerja sama</option><option>Saran dan masukan</option><option>Lainnya</option></select></div>
+                    <div class="col-12"><label for="pesan" class="form-label">Pesan</label><textarea class="form-control" id="pesan" name="pesan" rows="4" placeholder="Ceritakan kebutuhanmu di sini..." required></textarea></div>
+                    <div class="col-12 d-flex flex-column flex-sm-row align-items-sm-center justify-content-between gap-3"><small class="form-note">* Semua kolom wajib diisi.</small><button class="btn btn-coffee" type="submit">Kirim Pesan <span aria-hidden="true">↗</span></button></div>
+                  </div>
+                </form>
+                <div id="formSuccess" class="alert alert-success mt-3 mb-0 d-none" role="status">Terima kasih! Pesan kamu berhasil disiapkan. Ini merupakan simulasi form untuk tugas praktikum.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================== MODAL CERITA ======================== -->
+    <div class="modal fade" id="modalCerita" tabindex="-1" aria-labelledby="judulModalCerita" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal">
+        <div class="modal-header"><h2 class="modal-title fs-5" id="judulModalCerita">Cerita di Balik Selaras</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+        <div class="modal-body"><p>Selaras Coffee lahir dari ide sederhana: setiap orang membutuhkan ruang untuk berhenti sejenak dan menikmati hal-hal kecil. Kami percaya kopi yang baik bukan hanya soal rasa, tetapi juga tentang momen dan cerita yang tercipta.</p><div class="modal-note">GOOD COFFEE, GOOD COMPANY, GOOD MOMENTS.</div></div>
+        <div class="modal-footer"><button type="button" class="btn btn-coffee" data-bs-dismiss="modal">Mengerti</button></div>
+      </div></div>
+    </div>
+
+    <!-- ======================== MODAL DETAIL PRODUK ======================== -->
+    <div class="modal fade" id="modalProduk" tabindex="-1" aria-labelledby="judulModalProduk" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"><div class="modal-content custom-modal">
+        <div class="modal-header"><h2 class="modal-title fs-5" id="judulModalProduk">Detail Produk</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+        <div class="modal-body"><span class="section-label">SELARAS MENU</span><h3 id="namaProduk" class="h4 mt-2">Nama Produk</h3><p id="deskripsiProduk" class="mb-0">Deskripsi produk.</p></div>
+        <div class="modal-footer"><button type="button" class="btn btn-outline-coffee" data-bs-dismiss="modal">Tutup</button><a href="#kontak" class="btn btn-coffee" data-bs-dismiss="modal">Tanya Produk</a></div>
+      </div></div>
+    </div>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="custom-footer">
+      <div class="container">
+        <div class="row gy-4 align-items-center">
+          <div class="col-12 col-md-6"><a class="footer-brand" href="#beranda">selaras<span> coffee.</span></a><p class="footer-caption mb-0">Temukan ritme, nikmati setiap cerita.</p></div>
+          <div class="col-12 col-md-6 text-md-end"><div class="social-links"><a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><a href="https://tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a><a href="#kontak">Kontak</a></div></div>
+        </div>
+        <hr />
+        <div class="d-flex flex-column flex-sm-row justify-content-between gap-2 footer-bottom"><span>© 2026 Selaras Coffee. All rights reserved.</span><span>Dibuat dengan sepenuh hati ☕</span></div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle JS diperlukan untuk navbar collapse, alert, dan modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/script.js"></script>
+  </body>
+</html>
